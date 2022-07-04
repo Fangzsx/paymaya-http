@@ -79,7 +79,7 @@ describe('http rest adapter', () => {
 
         httpRestAdapter.request(url, options)
             .then(response => {
-                console.log(response)
+                // console.log(response)
                 done();
             })
             .catch(done.fail);

@@ -1,5 +1,5 @@
 const HttpRestAdapter = require('./HttpRestAdapter');
-const http = require('http');
+const http = require('https');
 
 
 function getHttpRestAdapter(){
