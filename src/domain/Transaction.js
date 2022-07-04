@@ -10,6 +10,5 @@ class Transaction{
         }
         return this.rest.request('POST', 'checkout/v1/checkouts', options)
     }
-
 }
 module.exports = Transaction

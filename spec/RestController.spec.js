@@ -79,7 +79,7 @@ describe('Rest Controller', () => {
 
         restController.request('POST', 'checkout/v1/checkouts', options)
             .then(response => {
-                // console.log(response);
+                console.log(response);
                 done();
             })
             .catch(done.fail);

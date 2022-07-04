@@ -10,6 +10,10 @@ class Paymaya{
         const transaction = new Transaction();
         return transaction.checkout(order)
     }
+    static getCheckoutInfo(id){
+        const transaction = new Transaction();
+        return transaction.getCheckoutInfo(id)
+    }
 
 }
 module.exports = Paymaya;

@@ -76,10 +76,9 @@ describe('http rest adapter', () => {
             body : JSON.stringify(transaction)
         }
 
-
         httpRestAdapter.request(url, options)
             .then(response => {
-                // console.log(response)
+                console.log(response)
                 done();
             })
             .catch(done.fail);
