@@ -12,4 +12,4 @@ class Paymaya{
     }
 
 }
-module.exports = Paymaya
+module.exports = Paymaya;
