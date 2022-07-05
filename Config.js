@@ -1,5 +1,9 @@
 const config = {
-    SERVER_URL : ''
+    SERVER_URL : '',
+    PUBLIC_KEY : '',
+    SECRET_KEY : '',
+    CONTENT_TYPE : '',
+    ACCEPT : ''
 }
 
 const Config = {

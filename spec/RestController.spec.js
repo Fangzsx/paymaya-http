@@ -1,8 +1,8 @@
-const Paymaya = require("../src/Paymaya");
-const RestController = require('../src/controllers/RestController')
+const Paymaya = require("../Paymaya");
+const RestController = require('../controllers/rest/RestController')
 
 
-describe('Rest Controller', () => {
+xdescribe('Rest Controller', () => {
     //init url
     const url = 'https://pg-sandbox.paymaya.com/'
     Paymaya.setUrl(url)
@@ -71,8 +71,6 @@ describe('Rest Controller', () => {
             ],
             requestReferenceNumber: 'random reference number'
         }
-
-
         const options = {
             body : transaction
         }

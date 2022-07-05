@@ -1,4 +1,5 @@
-const Config = require('../Config')
+const Config = require('../../Config')
+const toBase64 = require('../../ToBase64')
 
 class RestController{
     constructor(adapter) {
@@ -8,10 +9,12 @@ class RestController{
         const base = Config.get('SERVER_URL');
         return new URL(base + path);
     }
+
     writeHeaders(){
         this.headers = {};
         this.headers['Content-Type'] = 'application/json';
-        this.headers['Authorization'] = 'Basic cGstWjBPU3pMdkljT0kyVUl2RGhkVEdWVmZSU1NlaUdTdG5jZXF3VUU3bjBBaDpzay1YOHFvbFlqeTYya0l6RWJyMFFSSzFoNGI0S0RWSGFOY3dNWWszOWpJblNs'
+        //convert public key to base 64
+        this.headers['Authorization'] = 'Basic ' + toBase64(Config.get('PUBLIC_KEY'));
         this.headers['Accept'] = 'application/json'
     }
 
