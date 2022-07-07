@@ -32,13 +32,11 @@ class PaymayaAdapter{
         })
             .then(result => {
                 return {
-                    checkOutId : result.checkoutId,
+                    id : result.checkoutId,
                     amount : transaction.value,
                     redirectUrl : result.redirectUrl
                 }
             })
-
-
     }
     acceptPayment(transaction){
         const path = '/payments/v1/payments/' + transaction.id + '/capture';
@@ -60,9 +58,8 @@ class PaymayaAdapter{
 
     }
 
-
-    //custom request method for paymaya adapter, use http to perform requests.
-    //req = object
+    /*custom request method for paymaya adapter, use http to perform requests.
+    req = object*/
     _request(req){
         const auth = 'Basic ' + toBase64(this.options.accessKey);
         const headers = {
